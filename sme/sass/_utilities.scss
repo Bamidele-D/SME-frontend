@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--font-family);
+    overflow-x: hidden;
+}
+.input-group {
+    margin-bottom: var(--space-m);
+}
+.input-large {
+    width: 100%;
+    height: 56px;
+    padding: var(--space-m);
+    border-radius: var(--border-small);
+    font-size: var(--text-m);
+    border: 1px solid var(--color-gray1);
+    font-family: var(--font-family);
+    font-weight: 600;
+    color: var(--color-dark-blue);
+    &:focus {
+        outline: none;
+        border: 1px solid #dfe5ed;
+    }
+}
+.btn {
+    width: 100%;
+    background: var(--color-dark-blue);
+    color: var(--color-white);
+    height: 56px;
+    border-radius: var(--border-small);
+    outline: none;
+    border: none;
+    font-family: var(--font-family);
+    font-size: var(--text-xm);
+    padding: var(--space-s);
+    cursor: pointer;
+}
+.mt-1 {
+    margin-top: var(--space-s);
+}
+.mt-2 {
+    margin-top: var(--space-m);
+}
+.mt-3 {
+    margin-top: var(--space-l);
+}
+.mt-4 {
+    margin-top: var(--space-xl);
+}
+.mt-5 {
+    margin-top: var(--space-2xl);
+}
+// margin bottom
+.mb-1 {
+    margin-bottom: var(--space-s);
+}
+.mb-2 {
+    margin-bottom: var(--space-m);
+}
+.mb-3 {
+    margin-bottom: var(--space-l);
+}
+.mb-4 {
+    margin-bottom: var(--space-xl);
+}
+.mb-5 {
+    margin-bottom: var(--space-2xl);
+}

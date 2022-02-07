@@ -1,0 +1,844 @@
+:root {
+  --unit: 10px;
+  --font-family: 'Mulish', sans-serif;
+  --color-white: #ffffff;
+  --color-black: #1A1A1A;
+  --color-dark-blue: #28374C;
+  --color-light-blue: #DAE9FF;
+  --color-gray1: #dfe5ed;
+  --color-gray2: #C2C9D1;
+  --color-gray3: #939BA5;
+  --color-gray4: #FBFBFB;
+  --color-disabled: #A8B9D1;
+  --color-yellow: #FFD258;
+  --color-green: #3CC13B;
+  --color-red: #F03738;
+  --overlay-blue: rgba(36, 57, 140, .2);
+  --text-xs: 10px;
+  --text-s: 12px;
+  --text-m: 14px;
+  --text-xm: 16px;
+  --text-l: 24px;
+  --text-xl: 32px;
+  --space-s: var(--unit);
+  --space-m: calc(var(--unit) * 2);
+  --space-l: calc(var(--unit) * 3);
+  --space-xl: calc(var(--unit) * 4);
+  --space-2xl: calc(var(--unit) * 5);
+  --space-3xl: calc(var(--unit) * 6);
+  --space-4xl: calc(var(--unit) * 7);
+  --space-5xl: calc(var(--unit) * 8);
+  --line-height-s: 1.2;
+  --line-height-l: 1.6;
+  --border-small: 5px;
+  --border-full: 50%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  overflow-x: hidden;
+}
+
+.input-group {
+  margin-bottom: var(--space-m);
+}
+
+.input-large {
+  width: 100%;
+  height: 56px;
+  padding: var(--space-m);
+  border-radius: var(--border-small);
+  font-size: var(--text-m);
+  border: 1px solid var(--color-gray1);
+  font-family: var(--font-family);
+  font-weight: 600;
+  color: var(--color-dark-blue);
+}
+
+.input-large:focus {
+  outline: none;
+  border: 1px solid #dfe5ed;
+}
+
+.btn {
+  width: 100%;
+  background: var(--color-dark-blue);
+  color: var(--color-white);
+  height: 56px;
+  border-radius: var(--border-small);
+  outline: none;
+  border: none;
+  font-family: var(--font-family);
+  font-size: var(--text-xm);
+  padding: var(--space-s);
+  cursor: pointer;
+}
+
+.mt-1 {
+  margin-top: var(--space-s);
+}
+
+.mt-2 {
+  margin-top: var(--space-m);
+}
+
+.mt-3 {
+  margin-top: var(--space-l);
+}
+
+.mt-4 {
+  margin-top: var(--space-xl);
+}
+
+.mt-5 {
+  margin-top: var(--space-2xl);
+}
+
+.mb-1 {
+  margin-bottom: var(--space-s);
+}
+
+.mb-2 {
+  margin-bottom: var(--space-m);
+}
+
+.mb-3 {
+  margin-bottom: var(--space-l);
+}
+
+.mb-4 {
+  margin-bottom: var(--space-xl);
+}
+
+.mb-5 {
+  margin-bottom: var(--space-2xl);
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-columns: 15rem auto;
+  background-color: var(--color-gray4);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: auto;
+  }
+}
+
+.container aside {
+  height: 100%;
+  background: var(--color-dark-blue);
+}
+
+@media screen and (max-width: 768px) {
+  .container aside {
+    position: fixed;
+    left: 0;
+    width: 18rem;
+    z-index: 3;
+    height: 100vh;
+    display: none;
+  }
+}
+
+.container aside .top {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--space-m);
+  color: var(--color-white);
+}
+
+@media screen and (max-width: 768px) {
+  .container aside .top {
+    justify-content: space-between;
+  }
+}
+
+.container aside .top img {
+  height: 20px;
+}
+
+.container aside .top .close {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .container aside .top .close {
+    display: flex;
+    cursor: pointer;
+  }
+}
+
+.container aside .sidebar {
+  display: flex;
+  padding: var(--space-m);
+}
+
+.container aside .sidebar ul {
+  list-style-type: none;
+  width: 100%;
+}
+
+.container aside .sidebar ul li {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: var(--space-s);
+}
+
+.container aside .sidebar ul li a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  color: var(--color-white);
+  text-decoration: none;
+  font-family: var(--font-family);
+  font-size: var(--text-m);
+  line-height: var(--line-height-s);
+  font-weight: 600;
+  transition: 300ms;
+}
+
+.container aside .sidebar ul li a:hover {
+  background: var(--color-light-blue);
+  color: var(--color-dark-blue);
+  border-radius: var(--border-small);
+}
+
+.container aside .sidebar ul li a:hover svg path {
+  stroke: var(--color-dark-blue);
+}
+
+.container aside .sidebar ul li a.active {
+  background: var(--color-light-blue);
+  color: var(--color-dark-blue);
+  border-radius: var(--border-small);
+}
+
+.container aside .sidebar ul li a.active svg path {
+  stroke: var(--color-dark-blue);
+}
+
+.container aside .sidebar ul li a svg {
+  width: 16px;
+  height: 16px;
+  margin: 0 var(--space-m);
+  transition: 300ms;
+}
+
+.container main .dashboard-header {
+  width: 100%;
+  height: 72px;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-gray1);
+  padding: 0 var(--space-l);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .container main .dashboard-header {
+    padding: 0 var(--space-m);
+  }
+}
+
+.container main .dashboard-header .open-sidebar {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .container main .dashboard-header .open-sidebar {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container main .dashboard-header .welcome-message {
+    display: none;
+  }
+}
+
+.container main .dashboard-header .welcome-message h4 {
+  color: var(--color-dark-blue);
+  font-size: var(--text-xm);
+}
+
+.container main .dashboard-header .user-account {
+  display: flex;
+  align-items: center;
+}
+
+.container main .dashboard-header .user-account .user-notification {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-gray1);
+  border-radius: var(--border-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: var(--space-m);
+}
+
+.container main .dashboard-header .user-account .user-profile {
+  width: auto;
+  height: 48px;
+  border: 1px solid var(--color-gray1);
+  border-radius: var(--border-small);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.container main .dashboard-header .user-account .user-profile span:nth-child(1) {
+  width: 28px;
+  height: 28px;
+  background: var(--color-dark-blue);
+  border-radius: var(--border-full);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-s);
+  margin-right: 8px;
+}
+
+.container main .dashboard-header .user-account .user-profile span:nth-child(2) {
+  color: var(--color-dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-m);
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .container main .dashboard-header .user-account .user-profile span:nth-child(2) {
+    display: none;
+  }
+}
+
+.container main .dashboard-header .user-account .user-profile span:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container main .dashboard-header .user-account .user-profile span:nth-child(3) svg {
+  width: 12px;
+  height: 12px;
+}
+
+.container main .dashboard-content {
+  height: calc(100% - 72px);
+}
+
+.container main .dashboard-content .dashboard-section {
+  display: flex;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .container main .dashboard-content .dashboard-section {
+    flex-direction: column-reverse;
+  }
+}
+
+.container main .dashboard-content .dashboard-section .user-overview {
+  flex-basis: calc(100% - 22rem);
+  padding: var(--space-l);
+  border-right: 1px solid var(--color-gray1);
+}
+
+@media screen and (max-width: 768px) {
+  .container main .dashboard-content .dashboard-section .user-overview {
+    flex-basis: 100%;
+  }
+}
+
+.container main .dashboard-content .dashboard-section .user-overview > h4 {
+  color: var(--color-black);
+  font-size: var(--text-l);
+  font-weight: 700;
+  line-height: var(--line-height-s);
+  margin-bottom: 5px;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview > p {
+  color: var(--color-dark-blue);
+  font-size: var(--text-m);
+  line-height: var(--line-height-l);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .user-account-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .user-account-section .card {
+  width: calc(100% / 2 - 10px);
+  padding: var(--space-l);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray1);
+  border-radius: var(--border-small);
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .container main .dashboard-content .dashboard-section .user-overview .user-account-section .card {
+    width: 100%;
+  }
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .user-account-section .card.loan-balance button,
+.container main .dashboard-content .dashboard-section .user-overview .user-account-section .card.loan-balance .card-option {
+  background: var(--color-green);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .user-account-section .card-content {
+  height: 100%;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .user-account-section .card-content .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 75px;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .user-account-section .card-content .card-body p {
+  color: var(--color-dark-blue);
+  font-size: var(--text-m);
+  line-height: var(--line-height-l);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .user-account-section .card-content .card-body p.repayment-date {
+  margin: 10px 0 16px 0;
+  color: #283461;
+  font-size: var(--text-s);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .user-account-section .card-content .card-body p.repayment-date span {
+  font-weight: 700;
+  color: var(--color-dark-blue);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .user-account-section .card-content .card-body h4 {
+  color: var(--color-black);
+  font-size: var(--text-l);
+  font-weight: 700;
+  line-height: var(--line-height-s);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .user-account-section .card-content .card-footer {
+  display: flex;
+  align-items: center;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .user-account-section .card-content .card-footer button {
+  width: auto;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-s);
+  font-weight: 600;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .user-account-section .card-content .card-footer a {
+  color: var(--color-black);
+  font-size: var(--text-m);
+  font-weight: 600;
+  margin-left: var(--space-s);
+  line-height: var(--line-height-l);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .user-account-section .card-content .card-option {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 32px;
+  height: 32px;
+  background: var(--color-dark-blue);
+  border-radius: var(--border-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .user-account-section .card-content .card-option svg {
+  width: 14px;
+  height: 14px;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary {
+  display: flex;
+  border-top: 1px solid var(--color-gray1);
+}
+
+@media screen and (max-width: 768px) {
+  .container main .dashboard-content .dashboard-section .user-overview .account-summary {
+    flex-direction: column;
+  }
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .loan-history {
+  width: 50%;
+  padding-top: var(--space-l);
+  padding-right: var(--space-s);
+  border-right: 1px solid var(--color-gray1);
+}
+
+@media screen and (max-width: 768px) {
+  .container main .dashboard-content .dashboard-section .user-overview .account-summary .loan-history {
+    width: 100%;
+    padding-right: 0;
+    border-right: none;
+  }
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .loan-history .all-loans {
+  padding: 0 var(--space-m);
+  background: var(--color-white);
+  border-radius: var(--border-small);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .loan-history .all-loans .card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-m) 0;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-gray1);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .loan-history .all-loans .card:last-child {
+  border-bottom: none;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .loan-history .all-loans .card .loan-name {
+  width: 50%;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .loan-history .all-loans .card .loan-name h5 {
+  font-size: var(--text-m);
+  text-transform: capitalize;
+  color: var(--color-black);
+  margin-bottom: 4px;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .loan-history .all-loans .card .loan-name p {
+  color: var(--color-dark-blue);
+  font-size: var(--text-s);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .loan-history .all-loans .card .loan-amount {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .loan-history .all-loans .card .loan-amount h5 {
+  font-size: var(--text-m);
+  text-transform: capitalize;
+  color: var(--color-black);
+  margin-bottom: 4px;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .loan-history .all-loans .card .loan-amount p {
+  color: var(--color-dark-blue);
+  font-size: var(--text-s);
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .loan-history .all-loans .card .loan-amount p span {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--border-full);
+  margin-right: 4px;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .loan-history .all-loans .card .loan-amount p span.paid {
+  background: var(--color-green);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .loan-history .all-loans .card .loan-amount p span.pending {
+  background: var(--color-yellow);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .loan-history .all-loans .card .loan-amount p span.failed {
+  background: var(--color-red);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .repayment {
+  width: 50%;
+  padding-top: var(--space-l);
+  padding-left: var(--space-s);
+}
+
+@media screen and (max-width: 768px) {
+  .container main .dashboard-content .dashboard-section .user-overview .account-summary .repayment {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .repayment .all-repayments {
+  padding: 0 var(--space-m);
+  background: var(--color-white);
+  border-radius: var(--border-small);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .repayment .all-repayments .card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-m) 0;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-gray1);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .repayment .all-repayments .card:last-child {
+  border-bottom: none;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .repayment .all-repayments .card .loan-name {
+  width: 50%;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .repayment .all-repayments .card .loan-name h5 {
+  font-size: var(--text-m);
+  text-transform: capitalize;
+  color: var(--color-black);
+  margin-bottom: 4px;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .repayment .all-repayments .card .loan-name p {
+  color: var(--color-dark-blue);
+  font-size: var(--text-s);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .repayment .all-repayments .card .loan-amount {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .repayment .all-repayments .card .loan-amount h5 {
+  font-size: var(--text-m);
+  text-transform: capitalize;
+  color: var(--color-black);
+  margin-bottom: 4px;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .repayment .all-repayments .card .loan-amount p {
+  color: var(--color-dark-blue);
+  font-size: var(--text-s);
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .repayment .all-repayments .card .loan-amount p span {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--border-full);
+  margin-right: 4px;
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .repayment .all-repayments .card .loan-amount p span.paid {
+  background: var(--color-green);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .repayment .all-repayments .card .loan-amount p span.pending {
+  background: var(--color-yellow);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .repayment .all-repayments .card .loan-amount p span.failed {
+  background: var(--color-red);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .repayment .all-repayments .card .loan-amount p span.current {
+  background: var(--color-dark-blue);
+}
+
+.container main .dashboard-content .dashboard-section .user-overview .account-summary .repayment .all-repayments .card .loan-amount p span.upcoming {
+  background: var(--color-gray1);
+}
+
+.container main .dashboard-content .dashboard-section .complete-profile {
+  flex-basis: 22rem;
+  padding: var(--space-l);
+}
+
+.container main .dashboard-content .dashboard-section .complete-profile > h4 {
+  color: var(--color-black);
+  font-size: var(--text-xm);
+  font-weight: 700;
+  line-height: var(--line-height-s);
+}
+
+.container main .dashboard-content .dashboard-section .complete-profile .update-profile-card {
+  padding: var(--space-l);
+  margin-top: 85px;
+  border-radius: var(--border-small);
+  height: 220px;
+  display: flex;
+  background: var(--color-light-blue);
+  background-size: 500% 100%;
+  background-position: 50% 200%;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.container main .dashboard-content .dashboard-section .complete-profile .update-profile-card .update-image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0px;
+  right: -4px;
+  background-image: url("../images/update-profile.svg");
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.container main .dashboard-content .dashboard-section .complete-profile .update-profile-card .card-body {
+  z-index: 2;
+}
+
+.container main .dashboard-content .dashboard-section .complete-profile .update-profile-card .card-body h4 {
+  color: var(--color-black);
+  font-size: var(--text-xm);
+  font-weight: 700;
+  line-height: var(--line-height-s);
+}
+
+.container main .dashboard-content .dashboard-section .complete-profile .update-profile-card .card-body p {
+  color: var(--color-black);
+  font-size: var(--text-s);
+  line-height: var(--line-height-s);
+}
+
+.container main .dashboard-content .dashboard-section .complete-profile .update-profile-card .card-body button {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--text-s);
+}
+
+.container main .dashboard-content .dashboard-section .complete-profile .update-profile-card .card-body button span svg {
+  width: 16px;
+  height: 16px;
+}
+
+.modal {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  background: var(--overlay-blue);
+}
+
+.modal-card {
+  width: 40%;
+  background: var(--color-white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: var(--border-small);
+}
+
+.modal-card .close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: var(--space-m);
+  cursor: pointer;
+}
+
+.modal-card .close-modal p {
+  display: flex;
+  align-items: center;
+  font-size: var(--text-m);
+}
+
+.modal-card .close-modal p svg {
+  margin-right: 5px;
+}
+
+.modal-card .modal-content {
+  width: 75%;
+  margin: 50px auto 40px auto;
+}
+
+.modal-card .modal-content h4 {
+  text-align: center;
+  font-size: 20px;
+  color: var(--color-black);
+}
+
+.modal-card .modal-content p {
+  font-size: var(--text-m);
+}
+
+.modal-card .modal-line {
+  width: 100%;
+  height: 2px;
+  background: var(--color-gray1);
+}
+
+.modal-card .modal-line > .progress {
+  width: 0;
+  height: 2px;
+  background: var(--color-black);
+}
+
+.modal-card .modal-footer {
+  display: flex;
+  gap: 10px;
+  padding: var(--space-2xl);
+}
+
+.modal-card .modal-footer p {
+  display: flex;
+  align-items: center;
+  font-size: var(--text-s);
+  color: var(--color-dark-blue);
+}
+
+.modal-card .modal-footer p svg {
+  margin-right: 10px;
+}
+
+.modal-card .modal-footer button {
+  width: 175px;
+  height: 56px;
+  font-size: var(--text-m);
+}

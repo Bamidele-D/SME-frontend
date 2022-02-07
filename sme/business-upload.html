@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/business-upload.css">
+    <title>Kredi - SME</title>
+</head>
+<body>
+    <!-- authentication -->
+    <div class="container auth-section">
+        <!-- kredi logo -->
+        <div class="kredi-brand">
+            <img src="assets/images/kredi.png" alt="kredi logo">
+        </div>
+        <!-- card -->
+        <div class="card mt-2">
+            <div class="card-header">
+                <h3>One last step and you are good to go!</h3>
+                <p>Provide below the necessary credentials needed to complete you onboarding.</p>
+                <p class="upload-instruction mt-4">*Supported formats JPG, PNG, PDF Max 4MB</p>
+            </div>
+            <div class="card-body mt-1">
+                <form action="business-success.html" method="post">
+                    <div class="card-content">
+                        <div class="input-group">
+                            <label for="fname">Business Name</label>
+                            <input type="text" class="input-large input-text" name="fname">
+                        </div>
+                        <div class="input-group">
+                            <label for="lname">Address</label>
+                            <input type="text" class="input-large input-text">
+                        </div>
+                        <div class="input-group">
+                            <label for="lname">Date Of Incorporation</label>
+                            <input type="text" class="input-large input-text email">
+                        </div>
+                    </div>
+                    <button class="btn btn-continue mt-5"> Submit Document </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

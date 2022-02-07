@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/business.css">
+    <title>Kredi - SME</title>
+</head>
+<body>
+    <!-- authentication -->
+    <div class="container auth-section">
+        <!-- kredi logo -->
+        <div class="kredi-brand">
+            <img src="assets/images/kredi.png" alt="kredi logo">
+        </div>
+        <!-- card -->
+        <div class="card mt-2">
+            <div class="card-header">
+                <h3>You are almost there!</h3>
+                <p>Tell us about your business.</p>
+            </div>
+            <div class="card-body mt-3">
+                <form action="business-created.html" method="post">
+                    <div class="input-group">
+                        <input type="text" class="input-large input-text" name="fname">
+                        <label for="fname" class="input-label">Business Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="input-large input-text">
+                        <label for="lname" class="input-label">Address</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="input-large input-text email">
+                        <label for="lname" class="input-label">Date Of Incorporation</label>
+                    </div>
+                    <div class="input-group">
+                        <select name="" id="" class="input-large">
+                            <option value="">Nationality</option>
+                            <option value="">Nigeria</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" class="input-large input-text password">
+                        <label for="lname" class="input-label">Position in the company</label>
+                    </div>
+                    <div class="input-group mt-2 mb-2">
+                        <button class="btn btn-continue"> Continue 
+                            <span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 15.515 15.515 20 10 20C4.485 20 0 15.515 0 10C0 4.485 4.485 0 10 0C15.515 0 20 4.485 20 10ZM19.191 10C19.191 4.931 15.069 0.809 9.99999 0.809C4.93099 0.809 0.80899 4.931 0.80899 10C0.80899 15.069 4.93099 19.191 9.99999 19.191C15.069 19.191 19.191 15.069 19.191 10Z" fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.12525 13.1002C8.20725 13.1812 8.31825 13.2242 8.42625 13.2242C8.53325 13.2242 8.64425 13.1812 8.72625 13.1002L11.9132 9.91325C11.9943 9.83125 12.0373 9.72425 12.0373 9.61325C12.0373 9.50125 11.9943 9.39425 11.9132 9.31225L8.72625 6.12525C8.55925 5.95825 8.29325 5.95825 8.12525 6.12525C7.95825 6.29325 7.95825 6.55925 8.12525 6.72625L11.0122 9.61325L8.12525 12.4992C7.96225 12.6673 7.96225 12.9372 8.12525 13.1002Z" fill="white"/>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        // function to control input field animation
+        var textBlock = document.querySelectorAll('.input-text');
+        var firstName = document.querySelector('.fname');
+        var lastName = document.querySelector('.lname');
+        var email = document.querySelector('.email');
+        var phone = document.querySelector('.phone');
+        var password = document.querySelector('.password');
+        var checkBox = document.querySelector('#check');
+        var btnContinue = document.querySelector('.btn-continue');
+        
+        textBlock.forEach(input => {
+            input.addEventListener('keyup', () => {
+                if (input.value.length > 0) {
+                    input.classList.add('active');
+                }
+            })
+        })
+        
+        checkBox.addEventListener('change', () => {
+            if (checkBox.checked) {
+                if (firstName.value.length > 1 &&  
+                lastName.value.length > 1 && 
+                email.value.length > 1 &&
+                phone.value.length > 1 &&
+                password.value.length > 1) {
+                    btnContinue.classList.remove('btn-disabled');
+                    btnContinue.disabled = false;
+                }
+            }
+            
+            else {
+                btnContinue.classList.add('btn-disabled');
+                btnContinue.disabled = true;
+            }
+        })
+    </script>
+</body>
+</html>

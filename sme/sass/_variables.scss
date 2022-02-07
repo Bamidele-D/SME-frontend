@@ -1,0 +1,49 @@
+:root {
+    // default unit 
+    --unit: 10px;
+
+    // font
+    --font-family: 'Mulish', sans-serif;
+
+    // colors
+    --color-white: #ffffff;
+    --color-black: #1A1A1A;
+    --color-dark-blue: #28374C;
+    --color-light-blue: #DAE9FF;
+    --color-gray1: #dfe5ed;
+    --color-gray2: #C2C9D1;
+    --color-gray3: #939BA5;
+    --color-gray4: #FBFBFB;
+    --color-disabled: #A8B9D1;
+    --color-yellow: #FFD258;
+    --color-green: #3CC13B;
+    --color-red: #F03738;
+    --overlay-blue: rgba(36, 57, 140, .2);   
+
+
+    // font sizes
+    --text-xs: 10px;
+    --text-s: 12px;
+    --text-m: 14px;
+    --text-xm: 16px;
+    --text-l: 24px;
+    --text-xl: 32px;
+
+    // spacings
+    --space-s: var(--unit);
+    --space-m: calc(var(--unit) * 2);
+    --space-l: calc(var(--unit) * 3);
+    --space-xl: calc(var(--unit) * 4);
+    --space-2xl: calc(var(--unit) * 5);
+    --space-3xl: calc(var(--unit) * 6);
+    --space-4xl: calc(var(--unit) * 7);
+    --space-5xl: calc(var(--unit) * 8);
+
+    // line heights
+    --line-height-s: 1.2;
+    --line-height-l: 1.6;
+
+    // border radius
+    --border-small: 5px;
+    --border-full: 50%;
+}

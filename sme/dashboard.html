@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <!--------------------- SIDEBAR ---------------------------->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="assets/images/kredi.png" alt="kredi bank logo"> 
+                </div>
+                <div class="close">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.46409 15.5354L15.5352 8.46436" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M8.46409 8.46458L15.5352 15.5356" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="sidebar">
+                <ul>
+                    <li>
+                        <a href="" class="active">
+                            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.5 6.84505L9 1.01172L16.5 6.84505V16.0117C16.5 16.4537 16.3244 16.8777 16.0118 17.1902C15.6993 17.5028 15.2754 17.6784 14.8333 17.6784H3.16667C2.72464 17.6784 2.30072 17.5028 1.98816 17.1902C1.67559 16.8777 1.5 16.4537 1.5 16.0117V6.84505Z" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.5 17.6785V9.34521H11.5V17.6785" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.66634 1.01172H2.99967C2.55765 1.01172 2.13372 1.18731 1.82116 1.49987C1.5086 1.81243 1.33301 2.23636 1.33301 2.67839V16.0117C1.33301 16.4537 1.5086 16.8777 1.82116 17.1902C2.13372 17.5028 2.55765 17.6784 2.99967 17.6784H12.9997C13.4417 17.6784 13.8656 17.5028 14.1782 17.1902C14.4907 16.8777 14.6663 16.4537 14.6663 16.0117V6.01172L9.66634 1.01172Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11.3327 10.1782H4.66602" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11.3327 13.5117H4.66602" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.33268 6.84521H4.66602" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            
+                            Loan History
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.4997 1.67871H3.49967C2.5792 1.67871 1.83301 2.4249 1.83301 3.34538V13.3454C1.83301 14.2659 2.5792 15.012 3.49967 15.012H18.4997C19.4201 15.012 20.1663 14.2659 20.1663 13.3454V3.34538C20.1663 2.4249 19.4201 1.67871 18.4997 1.67871Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1.83301 6.67871H20.1663" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                
+                            Loan Repayment
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.8333 1.8457H3.16667C2.24619 1.8457 1.5 2.5919 1.5 3.51237V15.179C1.5 16.0995 2.24619 16.8457 3.16667 16.8457H14.8333C15.7538 16.8457 16.5 16.0995 16.5 15.179V3.51237C16.5 2.5919 15.7538 1.8457 14.8333 1.8457Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.5 1.8457V16.8457" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Bank & Cards
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.1663 16.8457V15.179C15.1663 14.295 14.8152 13.4471 14.19 12.822C13.5649 12.1969 12.7171 11.8457 11.833 11.8457H5.16634C4.28229 11.8457 3.43444 12.1969 2.80932 12.822C2.1842 13.4471 1.83301 14.295 1.83301 15.179V16.8457" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.49935 8.51237C10.3403 8.51237 11.8327 7.01999 11.8327 5.17904C11.8327 3.33809 10.3403 1.8457 8.49935 1.8457C6.6584 1.8457 5.16602 3.33809 5.16602 5.17904C5.16602 7.01999 6.6584 8.51237 8.49935 8.51237Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20.166 16.8458V15.1791C20.1655 14.4405 19.9196 13.7231 19.4672 13.1394C19.0147 12.5556 18.3811 12.1387 17.666 11.9541" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.333 1.9541C15.05 2.13769 15.6855 2.55469 16.1394 3.13936C16.5932 3.72403 16.8395 4.44313 16.8395 5.18327C16.8395 5.92341 16.5932 6.6425 16.1394 7.22718C15.6855 7.81185 15.05 8.22885 14.333 8.41243" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Team
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6673 9.3457V17.679H3.33398V9.3457" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1.66699 5.17969H18.3337V9.34635H1.66699V5.17969Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10 17.6797V5.17969" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10.0003 5.17936H6.25033C5.69779 5.17936 5.16789 4.95987 4.77719 4.56917C4.38649 4.17847 4.16699 3.64856 4.16699 3.09603C4.16699 2.54349 4.38649 2.01359 4.77719 1.62289C5.16789 1.23219 5.69779 1.0127 6.25033 1.0127C9.16699 1.0127 10.0003 5.17936 10.0003 5.17936Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10 5.17936H13.75C14.3025 5.17936 14.8324 4.95987 15.2231 4.56917C15.6138 4.17847 15.8333 3.64856 15.8333 3.09603C15.8333 2.54349 15.6138 2.01359 15.2231 1.62289C14.8324 1.23219 14.3025 1.0127 13.75 1.0127C10.8333 1.0127 10 5.17936 10 5.17936Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Refer & Earn
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 12.8457C12.3807 12.8457 13.5 11.7264 13.5 10.3457C13.5 8.96499 12.3807 7.8457 11 7.8457C9.61929 7.8457 8.5 8.96499 8.5 10.3457C8.5 11.7264 9.61929 12.8457 11 12.8457Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17.1663 12.8454C17.0554 13.0967 17.0223 13.3755 17.0713 13.6459C17.1204 13.9162 17.2492 14.1656 17.4413 14.362L17.4913 14.412C17.6463 14.5668 17.7692 14.7506 17.8531 14.953C17.937 15.1553 17.9802 15.3722 17.9802 15.5912C17.9802 15.8102 17.937 16.0271 17.8531 16.2294C17.7692 16.4318 17.6463 16.6156 17.4913 16.7704C17.3366 16.9253 17.1527 17.0483 16.9504 17.1321C16.7481 17.216 16.5312 17.2592 16.3122 17.2592C16.0931 17.2592 15.8763 17.216 15.6739 17.1321C15.4716 17.0483 15.2878 16.9253 15.133 16.7704L15.083 16.7204C14.8866 16.5283 14.6372 16.3994 14.3668 16.3504C14.0965 16.3014 13.8177 16.3344 13.5663 16.4454C13.3199 16.551 13.1097 16.7264 12.9616 16.95C12.8135 17.1736 12.7341 17.4356 12.733 17.7037V17.8454C12.733 18.2874 12.5574 18.7113 12.2449 19.0239C11.9323 19.3364 11.5084 19.512 11.0663 19.512C10.6243 19.512 10.2004 19.3364 9.88783 19.0239C9.57527 18.7113 9.39967 18.2874 9.39967 17.8454V17.7704C9.39322 17.4945 9.30394 17.227 9.14343 17.0026C8.98293 16.7782 8.75862 16.6073 8.49967 16.512C8.24833 16.4011 7.96951 16.368 7.69918 16.417C7.42885 16.4661 7.17941 16.5949 6.98301 16.787L6.93301 16.837C6.77822 16.992 6.5944 17.1149 6.39207 17.1988C6.18974 17.2827 5.97287 17.3259 5.75384 17.3259C5.53481 17.3259 5.31794 17.2827 5.11561 17.1988C4.91328 17.1149 4.72946 16.992 4.57467 16.837C4.41971 16.6823 4.29678 16.4984 4.21291 16.2961C4.12903 16.0938 4.08586 15.8769 4.08586 15.6579C4.08586 15.4389 4.12903 15.222 4.21291 15.0196C4.29678 14.8173 4.41971 14.6335 4.57467 14.4787L4.62467 14.4287C4.81679 14.2323 4.94566 13.9829 4.99468 13.7125C5.04369 13.4422 5.0106 13.1634 4.89967 12.912C4.79404 12.6656 4.61864 12.4554 4.39506 12.3073C4.17149 12.1592 3.9095 12.0798 3.64134 12.0787H3.49967C3.05765 12.0787 2.63372 11.9031 2.32116 11.5906C2.0086 11.278 1.83301 10.8541 1.83301 10.412C1.83301 9.97002 2.0086 9.54609 2.32116 9.23353C2.63372 8.92097 3.05765 8.74538 3.49967 8.74538H3.57467C3.8505 8.73892 4.11801 8.64964 4.34242 8.48914C4.56684 8.32863 4.73777 8.10432 4.83301 7.84538C4.94394 7.59403 4.97703 7.31522 4.92801 7.04489C4.879 6.77456 4.75012 6.52511 4.55801 6.32871L4.50801 6.27871C4.35305 6.12392 4.23012 5.94011 4.14624 5.73778C4.06237 5.53545 4.0192 5.31857 4.0192 5.09954C4.0192 4.88052 4.06237 4.66364 4.14624 4.46131C4.23012 4.25898 4.35305 4.07517 4.50801 3.92038C4.6628 3.76542 4.84661 3.64248 5.04894 3.55861C5.25127 3.47474 5.46815 3.43157 5.68717 3.43157C5.9062 3.43157 6.12308 3.47474 6.32541 3.55861C6.52774 3.64248 6.71155 3.76542 6.86634 3.92038L6.91634 3.97038C7.11274 4.16249 7.36219 4.29137 7.63252 4.34038C7.90285 4.3894 8.18166 4.35631 8.43301 4.24538H8.49967C8.74615 4.13974 8.95635 3.96434 9.10442 3.74077C9.25248 3.51719 9.33194 3.2552 9.33301 2.98704V2.84538C9.33301 2.40335 9.5086 1.97943 9.82116 1.66687C10.1337 1.35431 10.5576 1.17871 10.9997 1.17871C11.4417 1.17871 11.8656 1.35431 12.1782 1.66687C12.4907 1.97943 12.6663 2.40335 12.6663 2.84538V2.92038C12.6674 3.18853 12.7469 3.45052 12.8949 3.6741C13.043 3.89767 13.2532 4.07307 13.4997 4.17871C13.751 4.28964 14.0298 4.32273 14.3002 4.27371C14.5705 4.2247 14.8199 4.09582 15.0163 3.90371L15.0663 3.85371C15.2211 3.69875 15.4049 3.57582 15.6073 3.49194C15.8096 3.40807 16.0265 3.3649 16.2455 3.3649C16.4645 3.3649 16.6814 3.40807 16.8837 3.49194C17.0861 3.57582 17.2699 3.69875 17.4247 3.85371C17.5796 4.0085 17.7026 4.19231 17.7864 4.39464C17.8703 4.59697 17.9135 4.81385 17.9135 5.03288C17.9135 5.2519 17.8703 5.46878 17.7864 5.67111C17.7026 5.87344 17.5796 6.05726 17.4247 6.21204L17.3747 6.26204C17.1826 6.45844 17.0537 6.70789 17.0047 6.97822C16.9557 7.24855 16.9887 7.52736 17.0997 7.77871V7.84538C17.2053 8.09185 17.3807 8.30206 17.6043 8.45012C17.8279 8.59818 18.0899 8.67764 18.358 8.67871H18.4997C18.9417 8.67871 19.3656 8.85431 19.6782 9.16687C19.9907 9.47943 20.1663 9.90335 20.1663 10.3454C20.1663 10.7874 19.9907 11.2113 19.6782 11.5239C19.3656 11.8364 18.9417 12.012 18.4997 12.012H18.4247C18.1565 12.0131 17.8945 12.0926 17.671 12.2406C17.4474 12.3887 17.272 12.5989 17.1663 12.8454V12.8454Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Settings
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.5 11.8457C16.5 12.2877 16.3244 12.7117 16.0118 13.0242C15.6993 13.3368 15.2754 13.5124 14.8333 13.5124H4.83333L1.5 16.8457V3.51237C1.5 3.07034 1.67559 2.64642 1.98816 2.33386C2.30072 2.0213 2.72464 1.8457 3.16667 1.8457H14.8333C15.2754 1.8457 15.6993 2.0213 16.0118 2.33386C16.3244 2.64642 16.5 3.07034 16.5 3.51237V11.8457Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                
+                            Support
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.5 16.8457H3.16667C2.72464 16.8457 2.30072 16.6701 1.98816 16.3575C1.67559 16.045 1.5 15.6211 1.5 15.179V3.51237C1.5 3.07034 1.67559 2.64642 1.98816 2.33386C2.30072 2.0213 2.72464 1.8457 3.16667 1.8457H6.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.333 13.512L16.4997 9.34538L12.333 5.17871" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16.5 9.3457H6.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                                             
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <!----------------------- END OF SIDEBAR ----------------------->
+        <!-- MAIN CONTENT -->
+        <main>
+            <!-- HEADER -->
+            <div class="dashboard-header">
+                <div class="open-sidebar">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.5 12H3.5M21.5 19H3.5H21.5ZM21.5 5H3.5H21.5Z" stroke="var(--color-dark-blue)" stroke-miterlimit="10"></path>
+                    </svg>
+                </div>
+                <div class="welcome-message">
+                    <h4>Welcome back, Omolola!</h4>
+                </div>
+                <div class="user-account">
+                    <div class="user-notification">
+                        <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.6">
+                                <path d="M0.816016 6.33334C0.816016 3.47066 3.13667 1.15 5.99935 1.15C8.86202 1.15 11.1827 3.47066 11.1827 6.33333V11.0342H0.816016V6.33334Z" stroke="#28374C" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4.68511 13.0209C4.59986 12.6722 4.24806 12.4586 3.89934 12.5439C3.55063 12.6291 3.33705 12.9809 3.42231 13.3297L4.68511 13.0209ZM8.574 13.3297C8.65926 12.9809 8.44568 12.6291 8.09697 12.5439C7.74825 12.4586 7.39645 12.6722 7.3112 13.0209L8.574 13.3297ZM3.42231 13.3297C4.06998 15.9788 7.92633 15.9788 8.574 13.3297L7.3112 13.0209C6.98665 14.3484 5.00966 14.3484 4.68511 13.0209L3.42231 13.3297Z" fill="#28374C"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="user-profile">
+                        <span>FO</span>
+                        <span>Fele Omolola</span>
+                        <span>
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1.5L8 8.5L15 1.5" stroke="#28374C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                
+                        </span>
+                    </div>
+                </div>
+            </div> 
+            <!-- CONTENT -->
+            <div class="dashboard-content">
+                <div class="dashboard-section">
+                    <div class="user-overview">
+                        <div class="user">
+                            <h4>Overview</h4>
+                            <p>Here is an overview of</p>
+                            <div class="user-account-section mt-5">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <div class="card-body mb-4">
+                                            <p class="mb-1 mt-1">Available Overdraft</p>
+                                            <h4>₦20,000,000.00</h4>
+                                        </div>
+                                        <div class="card-footer">
+                                            <button class="btn">Apply Loan</button> 
+                                            <a href="">How overdraft works 
+                                                <span>
+                                                    <svg width="15" height="4" viewBox="0 0 15 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M14.1414 2.14142C14.2195 2.06332 14.2195 1.93668 14.1414 1.85858L12.8686 0.585786C12.7905 0.507682 12.6639 0.507682 12.5858 0.585786C12.5077 0.663891 12.5077 0.790524 12.5858 0.868629L13.7172 2L12.5858 3.13137C12.5077 3.20948 12.5077 3.33611 12.5858 3.41421C12.6639 3.49232 12.7905 3.49232 12.8686 3.41421L14.1414 2.14142ZM0 2.2H14V1.8H0V2.2Z" fill="#1A1A1A"/>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="card-option">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.1 10.1H2.4C2.0287 10.1 1.6726 9.9525 1.41005 9.68995C1.1475 9.4274 1 9.0713 1 8.7V2.4C1 2.0287 1.1475 1.6726 1.41005 1.41005C1.6726 1.1475 2.0287 1 2.4 1H8.7C9.0713 1 9.4274 1.1475 9.68995 1.41005C9.9525 1.6726 10.1 2.0287 10.1 2.4V3.1M7.3 5.9H13.6C14.3732 5.9 15 6.5268 15 7.3V13.6C15 14.3732 14.3732 15 13.6 15H7.3C6.5268 15 5.9 14.3732 5.9 13.6V7.3C5.9 6.5268 6.5268 5.9 7.3 5.9Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                        
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card loan-balance">
+                                    <div class="card-content">
+                                        <div class="card-body mb-4">
+                                            <p class="mb-1 mt-1">Current Loan Balance</p>
+                                            <h4>₦3,000,000.00</h4>
+                                            <p class="repayment-date">Next repayment date: <span>Feb 03, 2022</span></p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <button class="btn">Repay Loan</button> 
+                                            <a href="">View loan details  
+                                                <span>
+                                                    <svg width="15" height="4" viewBox="0 0 15 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M14.1414 2.14142C14.2195 2.06332 14.2195 1.93668 14.1414 1.85858L12.8686 0.585786C12.7905 0.507682 12.6639 0.507682 12.5858 0.585786C12.5077 0.663891 12.5077 0.790524 12.5858 0.868629L13.7172 2L12.5858 3.13137C12.5077 3.20948 12.5077 3.33611 12.5858 3.41421C12.6639 3.49232 12.7905 3.49232 12.8686 3.41421L14.1414 2.14142ZM0 2.2H14V1.8H0V2.2Z" fill="#1A1A1A"/>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="card-option">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.1 10.1H2.4C2.0287 10.1 1.6726 9.9525 1.41005 9.68995C1.1475 9.4274 1 9.0713 1 8.7V2.4C1 2.0287 1.1475 1.6726 1.41005 1.41005C1.6726 1.1475 2.0287 1 2.4 1H8.7C9.0713 1 9.4274 1.1475 9.68995 1.41005C9.9525 1.6726 10.1 2.0287 10.1 2.4V3.1M7.3 5.9H13.6C14.3732 5.9 15 6.5268 15 7.3V13.6C15 14.3732 14.3732 15 13.6 15H7.3C6.5268 15 5.9 14.3732 5.9 13.6V7.3C5.9 6.5268 6.5268 5.9 7.3 5.9Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- loan and repayment History -->
+                        <div class="account-summary mt-3">
+                            <div class="loan-history">
+                                <h4 class=" mb-3">Loan History</h4>
+                                <div class="all-loans">
+                                    <div class="card">
+                                        <div class="loan-name">
+                                            <h5>Business Loan</h5>
+                                            <p>Jan 1 at 3:46 PM</p>
+                                        </div>
+                                        <div class="loan-amount">
+                                            <h5>&#8358;150,000.00</h5>
+                                            <p><span class="paid"></span>Paid</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="loan-name">
+                                            <h5>Business Loan</h5>
+                                            <p>Jan 1 at 3:46 PM</p>
+                                        </div>
+                                        <div class="loan-amount">
+                                            <h5>&#8358;150,000.00</h5>
+                                            <p><span class="pending"></span>pending</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="loan-name">
+                                            <h5>Salary Loan</h5>
+                                            <p>Jan 1 at 3:46 PM</p>
+                                        </div>
+                                        <div class="loan-amount">
+                                            <h5>&#8358;150,000.00</h5>
+                                            <p><span class="failed"></span>failed</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="loan-name">
+                                            <h5>Real Estate Loan</h5>
+                                            <p>Jan 1 at 3:46 PM</p>
+                                        </div>
+                                        <div class="loan-amount">
+                                            <h5>&#8358;150,000.00</h5>
+                                            <p><span class="paid"></span>Paid</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="repayment">
+                                <h4 class="mb-3">Upcoming Repayments</h4>
+                                <div class="all-repayments">
+                                    <div class="card">
+                                        <div class="loan-name">
+                                            <h5>1st Repayment</h5>
+                                            <p>Dec 27 at 1:05 PM</p>
+                                        </div>
+                                        <div class="loan-amount">
+                                            <h5>&#8358;150,000.00</h5>
+                                            <p><span class="paid"></span>Paid</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="loan-name">
+                                            <h5>2nd Repayment</h5>
+                                            <p>Jan 1 at 3:46 PM</p>
+                                        </div>
+                                        <div class="loan-amount">
+                                            <h5>&#8358;150,000.00</h5>
+                                            <p><span class="current"></span>Current</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="loan-name">
+                                            <h5>3rd Repayment</h5>
+                                            <p>Jan 1 at 3:46 PM</p>
+                                        </div>
+                                        <div class="loan-amount">
+                                            <h5>&#8358;150,000.00</h5>
+                                            <p><span class="upcoming"></span>Upcoming</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="loan-name">
+                                            <h5>4th Repayment</h5>
+                                            <p>Dec 27 at 1:05 PM</p>
+                                        </div>
+                                        <div class="loan-amount">
+                                            <h5>&#8358;150,000.00</h5>
+                                            <p><span class="upcoming"></span>Upcoming</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="complete-profile">
+                        <h4>Complete profile set-up</h4>
+                        <div class="update-profile-card">
+                            <div class="update-image">
+                                <img src="assets/images/update-profile.svg" alt="">
+                            </div> 
+                            <div class="card-body">
+                                <h4>Update Profile</h4>
+                                <p class="mt-1">Your personal information is <br> incomplete. Kindly update your <br> profile.</p>
+                                <button class="btn mt-4">Update Profile 
+                                    <span>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 15.515 15.515 20 10 20C4.485 20 0 15.515 0 10C0 4.485 4.485 0 10 0C15.515 0 20 4.485 20 10ZM19.191 10C19.191 4.931 15.069 0.809 9.99999 0.809C4.93099 0.809 0.80899 4.931 0.80899 10C0.80899 15.069 4.93099 19.191 9.99999 19.191C15.069 19.191 19.191 15.069 19.191 10Z" fill="white"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.12525 13.1002C8.20725 13.1812 8.31825 13.2242 8.42625 13.2242C8.53325 13.2242 8.64425 13.1812 8.72625 13.1002L11.9132 9.91325C11.9943 9.83125 12.0373 9.72425 12.0373 9.61325C12.0373 9.50125 11.9943 9.39425 11.9132 9.31225L8.72625 6.12525C8.55925 5.95825 8.29325 5.95825 8.12525 6.12525C7.95825 6.29325 7.95825 6.55925 8.12525 6.72625L11.0122 9.61325L8.12525 12.4992C7.96225 12.6673 7.96225 12.9372 8.12525 13.1002Z" fill="white"/>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- modal -->
+    <div class="modal">
+        <div class="modal-card">
+            <div class="close-modal">
+                <p>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.46409 15.5354L15.5352 8.46436" stroke="#28374C" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M8.46409 8.46458L15.5352 15.5356" stroke="#28374C" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    Close
+                </p>
+            </div>
+            <div class="modal-content mt-4">
+                <h4 class="mb-3">How overdraft works</h4>
+                <p>Hello Omolola ,
+                    Are you committed to eating more plant-based recipes?  My goal is to help you fall in love with eating more plants. To celebrate, I’ve rounded up 100 of my favorite plant-based recipes. As a long time vegetarian, mostly vegan eater, these are the recipes that I turn to time and time again. Hope you enjoy!
+                </p>
+            </div>
+            <div class="modal-line">
+                <div class="progress"></div>
+            </div>
+            <div class="modal-footer">
+                <p>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle opacity="0.08" cx="12" cy="12" r="12" fill="#28374C"/>
+                        <path d="M12.011 16.9281C11.675 16.9281 11.3856 16.8135 11.143 16.5843C10.9096 16.346 10.793 16.0618 10.793 15.7318C10.793 15.4018 10.9096 15.1222 11.143 14.893C11.3856 14.6638 11.675 14.5492 12.011 14.5492C12.347 14.5492 12.6316 14.6638 12.865 14.893C13.0983 15.1222 13.215 15.4018 13.215 15.7318C13.215 16.0618 13.0983 16.346 12.865 16.5843C12.6316 16.8135 12.347 16.9281 12.011 16.9281ZM11.059 9.83267V7H12.949V9.83267L12.753 13.4629H11.255L11.059 9.83267Z" fill="#28374C"/>
+                    </svg>                    
+                    Kindly click on “I agree” to continue after you’ve 
+                    carefully read throught the above information.</p>
+                    <button class="btn">I Agree</button>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // function to close modal
+            document.querySelector('.close-modal').addEventListener('click', () => {
+                document.querySelector('.modal').style.display = 'none';
+            })
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,611 @@
+@import "variables";
+@import "mixins";
+@import "utilities";
+.container {
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: 15rem auto;
+    background-color: var(--color-gray4);
+    @media screen and (max-width: 768px) {
+        grid-template-columns: auto;
+    }
+    aside {
+        height: 100%;
+        background: var(--color-dark-blue);
+        @media screen and (max-width: 768px) {
+            position: fixed;
+            left: 0;
+            width: 18rem;
+            z-index: 3;
+            height: 100vh;
+            display: none;
+        }
+        .top {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 var(--space-m);
+            color: var(--color-white);
+            @media screen and (max-width: 768px) {
+                justify-content: space-between;
+            }
+            img {
+                height: 20px;
+            }
+            .close {
+                display: none;
+                @media screen and (max-width: 768px) {
+                    display: flex;
+                    cursor: pointer;
+                }
+            }
+        }
+        .sidebar {
+            display: flex;
+            padding: var(--space-m);
+            ul {
+                list-style-type: none;
+                width: 100%;
+                li {
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    margin-bottom: var(--space-s);
+                    a {
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        align-items: center;
+                        color: var(--color-white);
+                        text-decoration: none;
+                        font-family: var(--font-family);
+                        font-size: var(--text-m);
+                        line-height: var(--line-height-s);
+                        font-weight: 600;
+                        transition: 300ms;
+                        &:hover {
+                            background: var(--color-light-blue);
+                            color: var(--color-dark-blue);
+                            border-radius: var(--border-small);
+                            svg {
+                                path {
+                                    stroke: var(--color-dark-blue);
+                                }
+                            }
+                        }
+                        &.active {
+                            background: var(--color-light-blue);
+                            color: var(--color-dark-blue);
+                            border-radius: var(--border-small);
+                            svg {
+                                path {
+                                    stroke: var(--color-dark-blue);
+                                }
+                            }
+                        }
+                        svg {
+                            width: 16px;
+                            height: 16px;
+                            margin: 0 var(--space-m);
+                            transition: 300ms;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    main {
+        .dashboard-header {
+            width: 100%;
+            height: 72px;
+            background: var(--color-white);
+            border-bottom: 1px solid var(--color-gray1);
+            padding: 0 var(--space-l);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @media screen and (max-width: 768px) {
+                padding: 0 var(--space-m);
+            }
+            .open-sidebar {
+                display: none;
+                @media screen and (max-width: 768px) {
+                    display: flex;
+                }
+            }
+            .welcome-message {
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+                h4 {
+                    color: var(--color-dark-blue);
+                    font-size: var(--text-xm);
+                }
+            }
+            .user-account {
+                display: flex;
+                align-items: center;
+                .user-notification {
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid var(--color-gray1);
+                    border-radius: var(--border-full);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: var(--space-m);
+                }
+                .user-profile {
+                    width: auto;
+                    height: 48px;
+                    border: 1px solid var(--color-gray1);
+                    border-radius: var(--border-small);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px;
+                    span {
+                        &:nth-child(1){
+                            width: 28px;
+                            height: 28px;
+                            background: var(--color-dark-blue);
+                            border-radius: var(--border-full);
+                            color: var(--color-white);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: var(--text-s);
+                            margin-right: 8px;
+                        }
+                        &:nth-child(2){
+                            color: var(--color-dark-blue);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: var(--text-m);
+                            font-weight: 700;
+                            margin-right: 8px;
+                            @media screen and (max-width: 768px) {
+                                display: none;
+                            }
+                        }
+                        &:nth-child(3){
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            svg {
+                                width: 12px;
+                                height: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard-content {
+            height: calc(100% - 72px);
+            .dashboard-section {
+                display: flex;
+                height: 100%;
+                @media screen and (max-width: 768px) {
+                    flex-direction: column-reverse;
+                }
+                .user-overview {
+                    flex-basis: calc(100% - 22rem);
+                    padding: var(--space-l);
+                    border-right: 1px solid var(--color-gray1);
+                    @media screen and (max-width: 768px) {
+                        flex-basis: 100%;
+                    }
+                    > h4 {
+                        color: var(--color-black);
+                        font-size: var(--text-l);
+                        font-weight: 700;
+                        line-height: var(--line-height-s);
+                        margin-bottom: 5px;
+                    }
+                    > p {
+                        color: var(--color-dark-blue);
+                        font-size: var(--text-m);
+                        line-height: var(--line-height-l);
+                    }
+                    .user-account-section {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 20px;
+                        .card {
+                            width: calc(100% / 2 - 10px);
+                            padding: var(--space-l);
+                            background: var(--color-white);
+                            border: 1px solid var(--color-gray1);
+                            border-radius: var(--border-small);
+                            position: relative;
+                            @media screen and (max-width: 768px) {
+                                width: 100%;
+                            }
+                            &.loan-balance {
+                                button,
+                                .card-option {
+                                    background: var(--color-green);
+                                }
+                            }
+                            &-content {
+                                height: 100%;
+                                .card-body {
+                                    display: flex;
+                                    flex-direction: column;
+                                    height: 75px;
+                                    p {
+                                        color: var(--color-dark-blue);
+                                        font-size: var(--text-m);
+                                        line-height: var(--line-height-l);
+                                        &.repayment-date {
+                                            margin: 10px 0 16px 0;
+                                            color: #283461;
+                                            font-size: var(--text-s);
+                                            span {
+                                                font-weight: 700;
+                                                color: var(--color-dark-blue);
+                                            }
+                                        }
+                                    }
+                                    h4 {
+                                        color: var(--color-black);
+                                        font-size: var(--text-l);
+                                        font-weight: 700;
+                                        line-height: var(--line-height-s);
+                                    }
+                                }
+                                .card-footer {
+                                    display: flex;
+                                    align-items: center;
+                                    button {
+                                        width: auto;
+                                        height: 40px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        font-size: var(--text-s);
+                                        font-weight: 600;
+                                    }
+                                    a {
+                                        color: var(--color-black);
+                                        font-size: var(--text-m);
+                                        font-weight: 600;
+                                        margin-left: var(--space-s);
+                                        line-height: var(--line-height-l);
+                                    }
+                                }
+                                .card-option {
+                                    position: absolute;
+                                    top: 30px;
+                                    right: 30px;
+                                    width: 32px;
+                                    height: 32px;
+                                    background: var(--color-dark-blue);
+                                    border-radius: var(--border-full);
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    svg {
+                                        width: 14px;
+                                        height: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .account-summary {
+                        display: flex;
+                        border-top: 1px solid var(--color-gray1);
+                        @media screen and (max-width: 768px) {
+                            flex-direction: column;
+                        }
+                        .loan-history {
+                            width: 50%;
+                            padding-top: var(--space-l);
+                            padding-right: var(--space-s);
+                            border-right: 1px solid var(--color-gray1);
+                            @media screen and (max-width: 768px) {
+                                width: 100%;
+                                padding-right: 0;
+                                border-right: none;
+                            }
+                            .all-loans {
+                                padding: 0 var(--space-m);
+                                background: var(--color-white);
+                                border-radius: var(--border-small);
+                                .card {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    padding: var(--space-m) 0;
+                                    background: var(--color-white);
+                                    border-bottom: 1px solid var(--color-gray1);
+                                    &:last-child {
+                                        border-bottom: none;
+                                    }
+                                    .loan-name {
+                                        width: 50%;
+                                        h5 {
+                                            font-size: var(--text-m);
+                                            text-transform: capitalize;
+                                            color: var(--color-black);
+                                            margin-bottom: 4px;
+                                        }
+                                        p {
+                                            color: var(--color-dark-blue);
+                                            font-size: var(--text-s);
+                                        }
+                                    }
+                                    .loan-amount {
+                                        width: 50%;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: flex-end;
+                                        h5 {
+                                            font-size: var(--text-m);
+                                            text-transform: capitalize;
+                                            color: var(--color-black);
+                                            margin-bottom: 4px;
+                                        }
+                                        p {
+                                            color: var(--color-dark-blue);
+                                            font-size: var(--text-s);
+                                            display: flex;
+                                            align-items: center;
+                                            text-transform: capitalize;
+                                            span {
+                                                width: 8px;
+                                                height: 8px;
+                                                border-radius: var(--border-full);
+                                                margin-right: 4px;
+                                                &.paid {
+                                                    background: var(--color-green);
+                                                }
+                                                &.pending {
+                                                    background: var(--color-yellow);
+                                                }
+                                                &.failed {
+                                                    background: var(--color-red);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }
+                        .repayment {
+                            width: 50%;
+                            padding-top: var(--space-l);
+                            padding-left: var(--space-s);
+                            @media screen and (max-width: 768px) {
+                                width: 100%;
+                                padding-left: 0;
+                            }
+                            .all-repayments {
+                                padding: 0 var(--space-m);
+                                background: var(--color-white);
+                                border-radius: var(--border-small);
+                                .card {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    padding: var(--space-m) 0;
+                                    background: var(--color-white);
+                                    border-bottom: 1px solid var(--color-gray1);
+                                    &:last-child {
+                                        border-bottom: none;
+                                    }
+                                    .loan-name {
+                                        width: 50%;
+                                        h5 {
+                                            font-size: var(--text-m);
+                                            text-transform: capitalize;
+                                            color: var(--color-black);
+                                            margin-bottom: 4px;
+                                        }
+                                        p {
+                                            color: var(--color-dark-blue);
+                                            font-size: var(--text-s);
+                                        }
+                                    }
+                                    .loan-amount {
+                                        width: 50%;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: flex-end;
+                                        h5 {
+                                            font-size: var(--text-m);
+                                            text-transform: capitalize;
+                                            color: var(--color-black);
+                                            margin-bottom: 4px;
+                                        }
+                                        p {
+                                            color: var(--color-dark-blue);
+                                            font-size: var(--text-s);
+                                            display: flex;
+                                            align-items: center;
+                                            text-transform: capitalize;
+                                            span {
+                                                width: 8px;
+                                                height: 8px;
+                                                border-radius: var(--border-full);
+                                                margin-right: 4px;
+                                                &.paid {
+                                                    background: var(--color-green);
+                                                }
+                                                &.pending {
+                                                    background: var(--color-yellow);
+                                                }
+                                                &.failed {
+                                                    background: var(--color-red);
+                                                }
+                                                &.current {
+                                                    background: var(--color-dark-blue);
+                                                }
+                                                &.upcoming {
+                                                    background: var(--color-gray1);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .complete-profile {
+                    flex-basis: 22rem;
+                    padding: var(--space-l);
+                    > h4 {
+                        color: var(--color-black);
+                        font-size: var(--text-xm);
+                        font-weight: 700;
+                        line-height: var(--line-height-s);
+                    }
+                    .update-profile-card {
+                        padding: var(--space-l);
+                        margin-top: 85px;
+                        border-radius: var(--border-small);
+                        height: 220px;
+                        display: flex;
+                        background: var(--color-light-blue);
+                        background-size: 500% 100%;
+                        background-position: 50% 200%;
+                        background-repeat: no-repeat;
+                        position: relative;
+                        overflow: hidden;
+                        .update-image {
+                            width: 100%;
+                            height: auto;
+                            position: absolute;
+                            top: 0px;
+                            right: -4px;
+                            background-image: url('../images/update-profile.svg');
+                            background-repeat: no-repeat;
+                            z-index: 0;
+                        }
+                        .card-body {
+                            z-index: 2;
+                            h4 {
+                                color: var(--color-black);
+                                font-size: var(--text-xm);
+                                font-weight: 700;
+                                line-height: var(--line-height-s);
+                            }
+                            p {
+                                color: var(--color-black);
+                                font-size: var(--text-s);
+                                line-height: var(--line-height-s);
+                            }
+                            button {
+                                height: 40px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                font-size: var(--text-s);
+                                span {
+                                    svg {
+                                        width: 16px;
+                                        height: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// modal
+.modal {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    background: var(--overlay-blue);
+    &-card {
+        width: 40%;
+        background: var(--color-white);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: var(--border-small);
+        .close-modal {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: var(--space-m);
+            cursor: pointer;
+            p {
+                display: flex;
+                align-items: center;
+                font-size: var(--text-m);
+                svg {
+                    margin-right: 5px;
+                }
+            }
+        }
+        .modal-content {
+            width: 75%;
+            margin: 50px auto 40px auto;
+            h4 {
+                text-align: center;
+                font-size: 20px;
+                color: var(--color-black);
+            }
+            p {
+                font-size: var(--text-m);
+            }
+        }
+        .modal-line {
+            width: 100%;
+            height: 2px;
+            background: var(--color-gray1);
+            > .progress {
+                width: 0;
+                height: 2px;
+                background: var(--color-black);
+            }
+        }
+        .modal-footer {
+            display: flex;
+            gap: 10px;
+            padding: var(--space-2xl);
+            p {
+                display: flex;
+                align-items: center;
+                font-size: var(--text-s);
+                color: var(--color-dark-blue);
+                svg {
+                    margin-right: 10px;
+                }
+            }
+            button {
+                width: 175px;
+                height: 56px;
+                font-size: var(--text-m);
+            }
+        }
+    }
+}
+// @media screen and (max-width: 768px) {
+//    aside {
+
+//    }
+//    .dashboard-section {
+//        grid-template-columns: 100%;
+//    }
+// }
